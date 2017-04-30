@@ -1,0 +1,422 @@
+﻿
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="theme-color" content="#ffffff">
+	<meta name="viewport" content="width=device-width"/>
+	<title>Check Out My Collection</title>
+	<style>
+		.tooltip {
+			border:2px solid #f7eed7;
+			border-radius:4px;
+			padding:10px;
+			margin-bottom:10px;
+			margin-left:0px;
+			background-color:#f7eed7;
+			font:12px Verdana;
+			line-height:18px;
+			box-shadow: 0px 3px 10px grey;
+		}
+			a {
+				cursor:pointer;
+				color:blue;
+				text-align: center
+			}
+			a:hover {
+				color:black;
+			}
+			label {
+				display:inline-block;
+				width:250px;
+				text-align:right;
+				padding:5px;
+			}
+			a:link {
+				color:blue;
+				text-decoration: underline;
+			}
+	</style>
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.imagemapster.min.js"></script>
+	<script type="text/javascript">
+				$(document).ready(function() {
+			$('img').mapster({
+				fillOpacity: 0.5,
+				render_highlight: {
+					fillColor: 'f7eed7',
+					stroke: true,
+					strokeColor: 'f7eed7'
+				},
+								clickNavigate: true,
+								fadeInterval: 50,
+				showToolTip: true,
+				onClick: function (e) {
+					$('#coordinateslabel').hide();
+					$('#deletelabel').show();
+					var thisId = e.key;
+					thisId = thisId.replace('game-', '');
+					$('#existing').val(thisId);
+					console.log($('#existing').val());
+					$('#game').val(thisId);
+					$('#description').val($('#hd'+thisId).val());
+				},
+				toolTipContainer: '<div class="tooltip" style="text-align:left;max-width:200px;"></div>',
+				mapKey: 'data-key',
+				areas: [
+													{
+									key: 'game-1',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Blood Rage</b>'
+								}
+							,						
+{
+									key: 'game-2',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Ticket to Ride: Europe</b>'
+								}
+							,
+													{
+									key: 'game-3',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Captain Sonar</b>'
+								}
+							,						
+{
+									key: 'game-4',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Cry Havoc</b>'
+								}
+							,	
+													{
+									key: 'game-5',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Dixit</b>'
+								}
+							,						
+{
+									key: 'game-6',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Exploding Kittens</b>'
+								}
+							,
+													{
+									key: 'game-7',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Scythe: Invaders from Afar</b>'
+								}
+							,						
+{
+									key: 'game-8',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Carcassonne</b>'
+								}
+							,	
+{
+									key: 'game-9',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Carcassonne: Hunters & Gatherers</b>'
+								}
+							,		
+													{
+									key: 'game-10',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Trivial Pursuit: Genus VI</b>'
+								}
+							,						
+{
+									key: 'game-11',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Scythe</b>'
+								}
+							,
+													{
+									key: 'game-12',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Terraforming Mars</b>'
+								}
+							,						
+{
+									key: 'game-13',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Guards of Atlantis</b>'
+								}
+							,	
+{
+									key: 'game-14',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Pandemic Legacy: Season 1</b>'
+								}
+							,	
+													{
+									key: 'game-15',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Werewolf</b>'
+								}
+							,						
+{
+									key: 'game-16',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Tides of Madness</b>'
+								}
+							,
+													{
+									key: 'game-17',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Saboteur</b>'
+								}
+							,						
+{
+									key: 'game-18',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Drecksau</b>'
+								}
+							,	
+													{
+									key: 'game-19',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Codenames</b>'
+								}
+							,						
+{
+									key: 'game-20',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Starship Catan</b>'
+								}
+							,
+													{
+									key: 'game-21',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Patchwork</b>'
+								}
+							,						
+{
+									key: 'game-22',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>7 Wonders Duel</b>'
+								}
+							,	
+{
+									key: 'game-23',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Legends of Andor: Chada & Thorn</b>'
+								}
+							,		
+													{
+									key: 'game-24',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Caesar & Cleopatra</b>'
+								}
+							,						
+{
+									key: 'game-25',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Imploding Kittens</b>'
+								}
+							,
+{
+									key: 'game-26',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Catan: Traveler - Compact Edition</b>'
+								}
+							,	
+{
+									key: 'game-27',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>7 Wonders</b>'
+								}
+							,		
+													{
+									key: 'game-28',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Looping Louie</b>'
+								}
+							,						
+{
+									key: 'game-29',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Labyrinth</b>'
+								}
+							,	
+{
+									key: 'game-30',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Starfarers of Catan</b>'
+								}
+							,
+{
+									key: 'game-31',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Concept</b>'
+								}
+							,	
+{
+									key: 'game-32',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Catan: Traders & Barbarians</b>'
+								}
+							,		
+													{
+									key: 'game-33',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Catan: Explorers & Pirates</b>'
+								}
+							,						
+{
+									key: 'game-34',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Catan</b>'
+								}
+							,	
+{
+									key: 'game-35',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Undermine PnP</b>'
+								}
+							,							
+											]
+			});
+					});
+				var width = 1000;
+		var height = 1371;
+		var multiplier = 2;
+		function smaller(){
+			width = width/2;
+			height = height/2;
+			multiplier = multiplier*2;
+			$('#zoom').val(multiplier);
+			$('#container').animate({
+				width:width
+			}, 500, function() {});
+			$('img').mapster('resize',width,height,500);
+		}
+		function bigger(){
+			width = width*2;
+			height = height*2;
+			multiplier = multiplier/2;
+			$('#zoom').val(multiplier);
+			$('#container').animate({
+				width:width
+			}, 500, function() {});
+			$('img').mapster('resize',width,height,500);
+		}
+		
+			</script>
+</head>
+	<body style="text-align:center;background-color:#eff0f2;font:12px Verdana;">
+					<p style="font-size:20px;"></p>
+			<div id="container" style="width:700px;margin:15px auto 15px auto;">
+				<img id="picture" src="DSC_0478.JPG" id="picture" width="700" style="border:1px solid blue;" usemap="#map"/>
+				<map name="map" id="map">									<area href="https://boardgamegeek.com/boardgame/170216/blood-rage" target="_BLANK" data-key="game-1" tooltip="" href="#" shape="poly" coords="319,26,682,35,676,164,321,161" />
+																			<area href="https://boardgamegeek.com/boardgame/14996/ticket-ride-europe" target="_BLANK" data-key="game-2" tooltip="" href="#" shape="poly" coords="226,78,312,70,335,436,253,439" />	
+																			<area href="https://boardgamegeek.com/boardgame/171131/captain-sonar" target="_BLANK" data-key="game-3" tooltip="" href="#" shape="poly" coords="331,163,676,171,671,255,329,251" />
+																			<area href="https://boardgamegeek.com/boardgame/192457/cry-havoc" target="_BLANK" data-key="game-4" tooltip="" href="#" shape="poly" coords="328,249,675,257,669,378,328,371" />
+																			<area href="https://boardgamegeek.com/boardgame/39856/dixit" target="_BLANK" data-key="game-5" tooltip="" href="#" shape="poly" coords="346,371,670,376,666,444,346,440" />
+																			<area href="https://boardgamegeek.com/boardgame/172225/exploding-kittens" target="_BLANK" data-key="game-6" tooltip="" href="#" shape="poly" coords="32,134,217,138,215,187,32,180" />	
+																			<area href="https://boardgamegeek.com/boardgame/199727/scythe-invaders-afar" target="_BLANK" data-key="game-7" tooltip="" href="#" shape="poly" coords="40,182,195,185,194,275,43,271" />
+																			<area href="https://boardgamegeek.com/boardgame/822/carcassonne" target="_BLANK" data-key="game-8" tooltip="" href="#" shape="poly" coords="16,271,240,276,241,359,18,352" />
+																			<area href="https://boardgamegeek.com/boardgame/4390/carcassonne-hunters-and-gatherers" target="_BLANK" data-key="game-9" tooltip="" href="#" shape="poly" coords="19,354,243,361,242,438,21,434" />
+																			<area href="https://boardgamegeek.com/boardgame/40853/trivial-pursuit-genus-vi" target="_BLANK" data-key="game-10" tooltip="" href="#" shape="poly" coords="350,466,660,466,657,529,351,527" />	
+																			<area href="https://boardgamegeek.com/boardgame/169786/scythe" target="_BLANK" data-key="game-11" tooltip="" href="#" shape="poly" coords="318,529,664,530,661,644,318,646" />
+																			<area href="https://boardgamegeek.com/boardgame/167791/terraforming-mars" target="_BLANK" data-key="game-12" tooltip="" href="#" shape="poly" coords="321,647,654,647,650,726,321,724" />
+																			<area href="https://boardgamegeek.com/boardgame/172965/guards-atlantis-tabletop-moba" target="_BLANK" data-key="game-13" tooltip="" href="#" shape="poly" coords="322,727,656,726,651,822,322,823" />
+																			<area href="https://boardgamegeek.com/boardgame/161936/pandemic-legacy-season-1" target="_BLANK" data-key="game-14" tooltip="" href="#" shape="poly" coords="353,829,651,829,648,907,352,907" />
+																			<area href="https://boardgamegeek.com/boardgame/25821/werewolves-millers-hollow" target="_BLANK" data-key="game-15" tooltip="" href="#" shape="poly" coords="43,517,149,520,166,521,167,548,147,547,42,547" />
+																			<area href="https://boardgamegeek.com/boardgame/195544/tides-madness" target="_BLANK" data-key="game-16" tooltip="" href="#" shape="poly" coords="25,546,171,550,174,593,25,590" />	
+																			<area href="https://boardgamegeek.com/boardgame/9220/saboteur" target="_BLANK" data-key="game-17" tooltip="" href="#" shape="poly" coords="175,548,281,548,282,570,173,570" />
+																			<area href="https://boardgamegeek.com/boardgame/118410/drecksau" target="_BLANK" data-key="game-18" tooltip="" href="#" shape="poly" coords="173,574,282,573,286,596,173,594" />
+																			<area href="https://boardgamegeek.com/boardgame/178900/codenames" target="_BLANK" data-key="game-19" tooltip="" href="#" shape="poly" coords="26,593,291,600,289,655,27,652" />
+																			<area href="https://boardgamegeek.com/boardgame/2338/starship-catan" target="_BLANK" data-key="game-20" tooltip="" href="#" shape="poly" coords="27,653,255,657,256,709,28,704" />	
+																			<area href="https://boardgamegeek.com/boardgame/163412/patchwork" target="_BLANK" data-key="game-21" tooltip="" href="#" shape="poly" coords="29,703,254,708,253,759,28,758" />
+																			<area href="https://boardgamegeek.com/boardgame/173346/7-wonders-duel" target="_BLANK" data-key="game-22" tooltip="" href="#" shape="poly" coords="27,759,262,764,264,816,29,816" />
+																			<area href="https://boardgamegeek.com/boardgame/177079/die-legenden-von-andor-chada-thorn" target="_BLANK" data-key="game-23" tooltip="" href="#" shape="poly" coords="30,816,253,818,254,865,30,866" />
+																			<area href="https://boardgamegeek.com/boardgame/132/caesar-cleopatra" target="_BLANK" data-key="game-24" tooltip="" href="#" shape="poly" coords="31,867,252,869,254,902,33,901" />	
+																			<area href="https://boardgamegeek.com/boardgame/204053/imploding-kittens" target="_BLANK" data-key="game-25" tooltip="" href="#" shape="poly" coords="271,659,292,656,308,885,288,888" />
+																			<area href="https://boardgamegeek.com/boardgame/172994/catan-traveler-compact-edition" target="_BLANK" data-key="game-26" tooltip="" href="#" shape="poly" coords="122,980,238,947,276,1061,277,1130,129,1103" />
+																			<area href="https://boardgamegeek.com/boardgame/68448/7-wonders" target="_BLANK" data-key="game-27" tooltip="" href="#" shape="poly" coords="96,1007,122,1006,128,1103,278,1132,277,1066,261,1008,320,1006,323,1046,338,1051,340,1142,341,1211,43,1216,38,1142" />
+																			<area href="https://boardgamegeek.com/boardgame/327/loopin-louie" target="_BLANK" data-key="game-28" tooltip="" href="#" shape="poly" coords="43,1221,325,1221,324,1313,44,1318" />	
+																			<area href="https://boardgamegeek.com/boardgame/1219/labyrinth" target="_BLANK" data-key="game-29" tooltip="" href="#" shape="poly" coords="44,1319,322,1316,323,1350,46,1354" />
+																			<area href="https://boardgamegeek.com/boardgame/1897/starfarers-catan" target="_BLANK" data-key="game-30" tooltip="" href="#" shape="poly" coords="317,922,623,922,637,942,631,1052,320,1049" />
+																			<area href="https://boardgamegeek.com/boardgame/147151/concept" target="_BLANK" data-key="game-31" tooltip="" href="#" shape="poly" coords="342,1050,399,1050,403,1073,397,1339,340,1341" />
+																			<area href="https://boardgamegeek.com/boardgame/27760/catan-traders-barbarians" target="_BLANK" data-key="game-32" tooltip="" href="#" shape="poly" coords="404,1054,481,1053,470,1336,398,1336" />
+																			<area href="https://boardgamegeek.com/boardgame/135378/catan-explorers-pirates" target="_BLANK" data-key="game-33" tooltip="" href="#" shape="poly" coords="481,1054,556,1054,546,1333,471,1335" />	
+																			<area href="https://boardgamegeek.com/boardgame/13/catan" target="_BLANK" data-key="game-34" tooltip="" href="#" shape="poly" coords="555,1053,632,1053,615,1334,545,1333" />
+																			<area href="https://boardgamegeek.com/boardgame/211175/undermine" target="_BLANK" data-key="game-35" tooltip="" href="#" shape="poly" coords="186,543,216,536,247,533,272,539,261,547,206,548" />
+																			
+												</map>
+			</div>
+			</p>
+
+</html>
+
